@@ -726,6 +726,7 @@ li {
 /* footer================================================================================== */
 .footer {
   background-color: #e6be00;
+  width: 100%;
   padding: 20px 0;
 }
 .footer-container {
