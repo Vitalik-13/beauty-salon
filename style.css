@@ -835,6 +835,16 @@ li {
   .card-description-paragraph {
     font-size: 12px;
   }
+  .cards-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 30%;
+    /* flex: 1 1 auto; */
+  }
+  .width {
+    width: 80%;
+  }
 }
 @media (max-width: 630px) {
   .link-container {
@@ -854,5 +864,11 @@ li {
   }
   .adout-us {
     max-width: 100%;
+  }
+  .title-why-us {
+    font-size: 40px;
+  }
+  .title-why-us::before {
+    left: 10%;
   }
 }
