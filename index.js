@@ -2,15 +2,15 @@ AOS.init();
 
 const swiper = new Swiper(".myswiper", {
   effect: "fade",
-  lazy: {
-    loadPrevNext: true,
-  },
-  preloadImages: false,
   grabCursor: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
+  lazy: {
+    loadPrevNext: true,
+  },
+  preloadImages: false,
 });
 swiper.el.addEventListener("mouseenter", () => {
   swiper.autoplay.stop();
