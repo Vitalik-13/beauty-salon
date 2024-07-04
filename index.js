@@ -2,13 +2,23 @@ AOS.init();
 
 const swiper = new Swiper(".myswiper", {
   effect: "fade",
+  lazy: {
+    loadPrevNext: true,
+  },
+  preloadImages: false,
   grabCursor: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
 });
+swiper.el.addEventListener("mouseenter", () => {
+  swiper.autoplay.stop();
+});
 
+swiper.el.addEventListener("mouseleave", () => {
+  swiper.autoplay.start();
+});
 var swiperTwo = new Swiper(".myswiper-two", {
   effect: "cube",
   grabCursor: true,
@@ -27,13 +37,6 @@ var swiperTwo = new Swiper(".myswiper-two", {
   },
 });
 
-swiper.el.addEventListener("mouseenter", () => {
-  swiper.autoplay.stop();
-});
-
-swiper.el.addEventListener("mouseleave", () => {
-  swiper.autoplay.start();
-});
 document.querySelector(".date").addEventListener("input", function (e) {
   let date = new Date(this.value);
   let day = date.getUTCDay();
