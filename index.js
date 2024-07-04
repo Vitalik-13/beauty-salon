@@ -7,10 +7,6 @@ const swiper = new Swiper(".myswiper", {
     delay: 2000,
     disableOnInteraction: false,
   },
-  lazy: {
-    loadPrevNext: true,
-  },
-  preloadImages: false,
 });
 swiper.el.addEventListener("mouseenter", () => {
   swiper.autoplay.stop();
