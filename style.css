@@ -861,7 +861,7 @@ li {
   }
   .card-description {
     position: relative;
-    bottom: 110px;
+    bottom: 130px;
     left: 10px;
     display: block;
     transform: translateY(0);
