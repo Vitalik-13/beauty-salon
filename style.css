@@ -797,6 +797,12 @@ li {
     justify-content: center;
     gap: 40px 0;
   }
+  .imge-fom-wrapper {
+    display: none;
+  }
+  .fom-body {
+    width: 100%;
+  }
   .schedule {
     width: 80%;
   }
@@ -832,6 +838,7 @@ li {
     font-size: 16px;
     left: 10px;
   }
+
   .card-description-paragraph {
     font-size: 12px;
   }
@@ -840,7 +847,7 @@ li {
   }
   .card {
     width: 30%;
-    /* flex: 1 1 auto; */
+    flex: 1 1 auto;
   }
   .width {
     width: 80%;
