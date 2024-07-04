@@ -240,7 +240,9 @@ li {
   width: 400px;
   height: 500px;
 }
-
+.slider-container {
+  display: none;
+}
 .swiper-slide {
   width: 400px;
 }
@@ -834,11 +836,36 @@ li {
   }
 }
 @media (max-width: 650px) {
+  .cards-container {
+    display: none;
+  }
+  .slider-container {
+    display: block;
+    margin-bottom: 150px;
+  }
   .card-description {
     font-size: 16px;
     left: 10px;
   }
-
+  .swiper-button-next::after {
+    margin-top: 650px;
+    color: #e6be00;
+  }
+  .swiper-button-prev::after {
+    margin-top: 650px;
+    color: #e6be00;
+  }
+  .swiper-slide {
+    position: absolute;
+  }
+  .card-description {
+    position: relative;
+    bottom: 110px;
+    left: 10px;
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+  }
   .card-description-paragraph {
     font-size: 12px;
   }
