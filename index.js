@@ -7,15 +7,13 @@ const swiper = new Swiper(".myswiper", {
     delay: 2000,
     disableOnInteraction: false,
   },
-});
-swiper.el.addEventListener("mouseenter", () => {
-  swiper.autoplay.stop();
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
-swiper.el.addEventListener("mouseleave", () => {
-  swiper.autoplay.start();
-});
-var swiperTwo = new Swiper(".myswiper-two", {
+const swiperTwo = new Swiper(".myswiper-two", {
   effect: "cube",
   grabCursor: true,
   cubeEffect: {
@@ -25,7 +23,8 @@ var swiperTwo = new Swiper(".myswiper-two", {
     shadowScale: 0.94,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-two",
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -33,6 +32,13 @@ var swiperTwo = new Swiper(".myswiper-two", {
   },
 });
 
+swiper.el.addEventListener("mouseenter", () => {
+  swiper.autoplay.stop();
+});
+
+swiper.el.addEventListener("mouseleave", () => {
+  swiper.autoplay.start();
+});
 document.querySelector(".date").addEventListener("input", function (e) {
   let date = new Date(this.value);
   let day = date.getUTCDay();
